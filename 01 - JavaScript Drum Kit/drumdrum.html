@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DrumDrum</title>
+</head>
+<body>
+    <span>===G====</span>
+
+    <audio key='71' src="sounds/boom.wav" >
+</body>
+<script>
+    console.log('hello')
+
+    window.addEventListener('keydown', e => {
+        const audio = document.querySelector(`audio[key='${e.keyCode}']`)
+
+        if(!audio) {
+            return;
+        }
+        audio.currentTime = 0;
+        audio.play();
+    })
+
+</script>
+</html>

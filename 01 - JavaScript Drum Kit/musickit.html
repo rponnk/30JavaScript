@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Kit</title>
+</head>
+<body>
+    
+    <audio data-key="65" src="sounds/clap.wav"></audio>
+</body>
+
+<script>
+
+    console.log('music script')
+
+    window.addEventListener('keydown', e => {
+        
+        // select audio by keyCode pressed down
+        let audio = document.querySelector(`audio[data-key='${e.keyCode}']`);
+
+        audio.currentTime = 0;
+        audio.play();
+    })
+</script>
+</html>
